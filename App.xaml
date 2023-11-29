@@ -1,7 +1,7 @@
-﻿<Application x:Class="squirrel.App"
+﻿<Application x:Class="Myproject.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:squirrel"
+             xmlns:local="clr-namespace:Myproject"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

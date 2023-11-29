@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <package>
   <metadata>
-    <id>Test</id>
+    <id>MyProject</id>
     <version>1.0.0</version>
-    <title>Nuget Package Name</title>
+    <title>MyProject</title>
     <authors>Company Ltd.</authors>
     <owners>Joe Smith</owners>
     <licenseUrl>https://www.website.com/terms</licenseUrl>
