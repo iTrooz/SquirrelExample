@@ -2,6 +2,9 @@
 REM Install Squirrel locally so that we can access squirrel.exe
 nuget install Squirrel.Windows -o local/squirrel
 
+REM Build project
+dotnet build
+
 REM Create .nupkg file from .nuspec
 nuget pack MyProject.nuspec -Properties Configuration=Release || exit /b
 
