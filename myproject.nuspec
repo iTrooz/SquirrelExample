@@ -6,7 +6,6 @@
     <title>MyProject</title>
     <authors>Company Ltd.</authors>
     <owners>Joe Smith</owners>
-    <licenseUrl>https://www.website.com/terms</licenseUrl>
     <projectUrl>https://www.website.com/project</projectUrl>
     <iconUrl>https://www.website.com/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
