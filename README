@@ -1,0 +1,10 @@
+# What is this
+
+A demo/example application using Squirrel for the packaging. It shows how to easily generate an installer for the application only using the CLI, with a all-in-one build script, and a CI
+Working as of 29/11/2023 on Windows 11 on 22H2
+
+# Why
+Because I wasn't able to figure out how to it using the official documentation, so I hope this can help people
+
+# Sources / See also :
+http://markwal.github.io/programming/2015/07/28/squirrel-for-windows.html
