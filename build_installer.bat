@@ -3,7 +3,7 @@ REM Install Squirrel locally so that we can access squirrel.exe
 nuget install Squirrel.Windows -o build/squirrel
 
 REM Clean
-DEL /F /Q build/publish_output build/Releases
+DEL /F /Q build\publish_output build\Releases || exit /b
 
 REM Build project
 if "%~1" == "" (
