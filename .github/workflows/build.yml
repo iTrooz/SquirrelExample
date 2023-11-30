@@ -26,8 +26,8 @@ jobs:
       - name: Rename installer files
         run: |
           mkdir Upload
-          mv ${{matrix.framework}}/Releases/Setup.exe Upload/MyProject-Installer.exe
-          mv ${{matrix.framework}}/Releases/Setup.msi Upload/MyProject-Installer.msi
+          mv ${{matrix.framework}}/build/Releases/Setup.exe Upload/MyProject-Installer.exe
+          mv ${{matrix.framework}}/build/Releases/Setup.msi Upload/MyProject-Installer.msi
       
       - name: Upload installer files
         uses: actions/upload-artifact@v3
