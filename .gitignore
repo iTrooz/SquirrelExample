@@ -1,6 +1,5 @@
 obj
 bin
-local
 build
 Releases
 *.nupkg

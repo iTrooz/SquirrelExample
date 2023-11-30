@@ -20,8 +20,8 @@
     <summary> A summary of your package </summary>
   </metadata>
   <files>
-    <file src="build\**" target="lib/Net45" exclude="*.pdb;*.nupkg;*.vshost.*"/>
-    <file src="local\squirrel.windows.*\lib\Net45\**" target="lib/Net45" exclude="*.pdb;*.nupkg;*.vshost.*"/>
+    <file src="build\publish_output\**" target="lib/Net45" exclude="*.pdb;*.nupkg;*.vshost.*"/>
+    <file src="build\squirrel\squirrel.windows.*\lib\Net45\**" target="lib/Net45" exclude="*.pdb;*.nupkg;*.vshost.*"/>
     <!-- <file src="transforms\web.config.install.xdt" target="content\web.config.install.xdt" />
     <file src="transforms\views.web.config.install.xdt" target="content\Views\web.config.install.xdt" />
     <file src="App_Data\Models\**" target="content\App_Data\Models" />
