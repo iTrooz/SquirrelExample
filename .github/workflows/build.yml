@@ -8,7 +8,7 @@ jobs:
   test:
     runs-on: windows-2022
     steps:
-      - name: 🧰 Checkout
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Run build script
