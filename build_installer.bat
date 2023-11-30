@@ -6,7 +6,7 @@ REM Clean
 DEL /F /Q build Releases
 
 REM Build project
-dotnet publish -o build
+dotnet publish -c Release -o build
 
 REM Create .nupkg file from .nuspec
 nuget pack MyProject.nuspec -Properties Configuration=Release || exit /b
