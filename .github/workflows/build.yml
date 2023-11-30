@@ -5,26 +5,34 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  build:
+    name: Build for ${{matrix.framework}}
     runs-on: windows-2022
+
+    strategy:
+      fail-fast: false
+      matrix:
+        framework: ["WPF", "Avalonia"]
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Run build script
         run: |
+          cd ${{matrix.framework}}
           ./build_installer.bat
 
       - name: Rename installer files
         run: |
           mkdir Upload
-          mv Releases/Setup.exe Upload/MyProject-Installer.exe
-          mv Releases/Setup.msi Upload/MyProject-Installer.msi
+          mv ${{matrix.framework}}/Releases/Setup.exe Upload/MyProject-Installer.exe
+          mv ${{matrix.framework}}/Releases/Setup.msi Upload/MyProject-Installer.msi
       
       - name: Upload installer files
         uses: actions/upload-artifact@v3
         with:
           if-no-files-found: error
-          name: Installers
+          name: ${{matrix.framework}} Installers
           path: |
             Upload/*
