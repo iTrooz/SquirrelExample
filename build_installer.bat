@@ -6,7 +6,14 @@ REM Clean
 DEL /F /Q build Releases
 
 REM Build project
-dotnet publish -c Release -o build || exit /b
+if "%~1" == "" (
+    REM note: --self-contained increases the size A LOT, but I don't want to depend on the right .NET version being installed on the user's computer
+    set SELF_CONTAINED=--self-contained
+) else (
+    REM note: argument passed, disabling self-contained build
+    set SELF_CONTAINED=--no-self-contained
+)
+dotnet publish -c Release -o build -r win-x64 %SELF_CONTAINED% || exit /b
 
 REM Create .nupkg file from .nuspec
 nuget pack MyProject.nuspec -Properties Configuration=Release || exit /b
