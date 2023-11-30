@@ -16,9 +16,9 @@ if "%~1" == "" (
 dotnet publish -c Release -o build/publish_output -r win-x64 %SELF_CONTAINED% || exit /b
 
 REM Create .nupkg file from .nuspec
-nuget pack MyProject.nuspec -Properties Configuration=Release || exit /b
+nuget pack MyProject.nuspec -Properties Configuration=Release -OutputDirectory build || exit /b
 
 REM Package it into a setup.msi and setup.exe (the latter doesn't require admin privileges to install), outputted to Releases/
-build\squirrel\Squirrel.windows.2.0.1\tools\Squirrel.exe --releasify MyProject.1.0.0.nupkg -r build/Releases || exit /b
+build\squirrel\Squirrel.windows.2.0.1\tools\Squirrel.exe --releasify build/MyProject.1.0.0.nupkg -r build/Releases || exit /b
 
 echo Done ! See files in build/Releases/
