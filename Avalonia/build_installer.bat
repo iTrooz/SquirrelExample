@@ -8,7 +8,7 @@ DEL /F /Q build\publish_output build\Releases || exit /b
 REM Build project
 if "%~1" == "" (
     REM note: --self-contained increases the size A LOT, but I don't want to depend on the right .NET version being installed on the user's computer
-    set SELF_CONTAINED=--self-contained
+    set SELF_CONTAINED=--self-contained -p:PublishTrimmed=true
 ) else (
     REM note: argument passed, disabling self-contained build
     set SELF_CONTAINED=--no-self-contained
